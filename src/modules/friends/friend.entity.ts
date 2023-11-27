@@ -4,5 +4,5 @@ import { Entity } from 'typeorm';
 @Entity()
 export default class FriendEntity {
         @IsArray()
-        public affiliate: [string, string];
+        public affiliate: string[];
 }
