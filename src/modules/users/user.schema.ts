@@ -23,6 +23,11 @@ export class UserSchemaDocument {
                 required: true,
         })
         public password: string;
+
+        @Prop({
+                required: true,
+        })
+        public age: number;
 }
 
 export const UserSchema = SchemaFactory.createForClass(UserSchemaDocument);
