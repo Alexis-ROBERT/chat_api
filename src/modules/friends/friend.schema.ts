@@ -2,15 +2,20 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 
 @Schema()
 export class FriendSchemaDocument {
-        @Prop()
+        @Prop({
+                required: true,
+        })
         public affiliate: string[];
 
-        public statutAffiliate;
+        @Prop({
+                required: true,
+        })
+        public statutAffiliate: string;
 }
 
-export const FriendSchema = SchemaFactory.createForClass(FriendSchemaDocument);
+export const friendSchema = SchemaFactory.createForClass(FriendSchemaDocument);
 
 export default {
         FriendSchemaDocument,
-        FriendSchema,
+        friendSchema,
 };
