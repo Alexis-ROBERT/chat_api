@@ -9,6 +9,7 @@ import MessageModule from './modules/messages/message.module';
 import SocketModule from './/modules/socket/soket.module';
 import ResourceModule from './modules/resources/resource.module';
 import FriendModule from './modules/friends/friend.module';
+import HistoryModule from './modules/history/history.module';
 
 dotenv.config();
 
@@ -18,12 +19,13 @@ dotenv.config();
                         isGlobal: true,
                         envFilePath: process.cwd() + '/.env',
                 }),
-                AuthenticationModule,
+                /* HistoryModule,
+                AuthenticationModule, */
                 DataModule,
-                FriendModule,
-                MessageModule,
+                FriendModule, /*
+                MessageModule, /*
                 ResourceModule,
-                SocketModule,
+                SocketModule, */
                 UserModule,
         ],
 })
