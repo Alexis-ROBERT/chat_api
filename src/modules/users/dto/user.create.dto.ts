@@ -6,4 +6,6 @@ export default class UserCreateDto {
         public email: string;
 
         public password: string;
+
+        public age: number;
 }
