@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty, IsString, IsStrongPassword, MaxLength, MinLength } from 'class-validator';
+import { IsEmail, IsNotEmpty, IsNumber, IsString, IsStrongPassword, MaxLength, MinLength } from 'class-validator';
 import { Entity } from 'typeorm';
 
 @Entity()
@@ -13,7 +13,7 @@ export default class UserEntity {
         @MaxLength(20)
         @IsString()
         public lastName: string;
-         
+
         @IsNotEmpty()
         @IsEmail()
         @IsString()
@@ -22,4 +22,7 @@ export default class UserEntity {
         @IsStrongPassword()
         @IsString()
         public password: string;
+
+        @IsNumber()
+        public age: number;
 }
