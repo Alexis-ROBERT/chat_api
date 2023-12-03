@@ -20,6 +20,11 @@ export class UserSchemaDocument {
         public email: string;
 
         @Prop({
+                required: true
+        })
+        public username: string;
+
+        @Prop({
                 required: true,
         })
         public password: string;
