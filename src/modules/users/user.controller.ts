@@ -22,7 +22,7 @@ export default class UserController {
                                 httpError = err as HttpException;
                         } else httpError = new HttpException('Server error internal', HttpStatus.INTERNAL_SERVER_ERROR);
 
-                        throw new HttpException(httpError.cause, httpError.getStatus());
+                        throw new HttpException(httpError.message, httpError.getStatus());
                 }
         }
 
